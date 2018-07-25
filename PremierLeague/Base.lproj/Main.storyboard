@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tvj-Fx-BiN">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Team List View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="TeamListViewController" id="BYZ-38-t0r" customClass="TeamListViewController" customModule="PremierLeague" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ISx-K1-CzH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="bwI-Fu-LKx"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="7rX-Lv-DjJ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ISx-K1-CzH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="9pJ-ag-wK7"/>
+                            <constraint firstItem="ISx-K1-CzH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MgW-u8-0UR"/>
+                            <constraint firstAttribute="bottom" secondItem="ISx-K1-CzH" secondAttribute="bottom" id="eRS-dg-uTN"/>
+                            <constraint firstAttribute="trailing" secondItem="ISx-K1-CzH" secondAttribute="trailing" id="tbE-OF-7w5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="QA3-hj-miH"/>
+                    <connections>
+                        <outlet property="teamListTable" destination="ISx-K1-CzH" id="Cgq-Km-GDD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1030" y="-664"/>
+        </scene>
+        <!--Team Tweets View Controller-->
+        <scene sceneID="tfG-sJ-qnK">
+            <objects>
+                <viewController storyboardIdentifier="TeamTweetsViewController" id="7o1-tC-nXi" customClass="TeamTweetsViewController" customModule="PremierLeague" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0ZK-27-kBg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aks-Wz-kfq">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uLu-Cj-Whb" firstAttribute="bottom" secondItem="Aks-Wz-kfq" secondAttribute="bottom" id="ILT-0Z-5Cu"/>
+                            <constraint firstItem="Aks-Wz-kfq" firstAttribute="top" secondItem="uLu-Cj-Whb" secondAttribute="top" id="LML-5z-Fsb"/>
+                            <constraint firstAttribute="trailing" secondItem="Aks-Wz-kfq" secondAttribute="trailing" id="Mda-ne-foH"/>
+                            <constraint firstItem="Aks-Wz-kfq" firstAttribute="leading" secondItem="0ZK-27-kBg" secondAttribute="leading" id="ST6-4W-huN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uLu-Cj-Whb"/>
+                    </view>
+                    <connections>
+                        <outlet property="tweetWebView" destination="Aks-Wz-kfq" id="rT8-qM-XSU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pTm-yF-244" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1900" y="-664"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gnl-Vf-sgB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tvj-Fx-BiN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="R4y-5s-U3u">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="YfX-7V-gy2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IOa-cN-Pzi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="120.8" y="-663.41829085457277"/>
+        </scene>
+    </scenes>
+</document>

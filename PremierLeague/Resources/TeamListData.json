@@ -1,0 +1,43 @@
+{
+    "TeamListData": [{
+                     "id": 25,
+                     "name": "Kolkata Knight Riders",
+                     "image": "KKR"
+                     },
+                     {
+                     "id": 25,
+                     "name": "Chennai Super Kings",
+                     "image": "CSK"
+                     },
+                     {
+                     "id": 25,
+                     "name": "Rajasthan Royals",
+                     "image": "RR"
+                     },
+                     {
+                     "id": 25,
+                     "name": "Sunrisers Hyderabad",
+                     "image": "SRH"
+                     },
+                     {
+                     "id": 25,
+                     "name": "Royal Challengers Bangalore",
+                     "image": "RCB"
+                     },
+                     {
+                     "id": 25,
+                     "name": "Mumbai Indians",
+                     "image": "MI"
+                     },
+                     {
+                     "id": 25,
+                     "name": "Kings XI Punjab",
+                     "image": "KXP"
+                     },
+                     {
+                     "id": 25,
+                     "name": "Delhi Daredevils",
+                     "image": "DD"
+                     },
+                     ]
+}
