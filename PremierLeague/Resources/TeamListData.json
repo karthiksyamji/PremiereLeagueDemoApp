@@ -2,42 +2,50 @@
     "TeamListData": [{
                      "id": 25,
                      "name": "Kolkata Knight Riders",
-                     "image": "KKR"
+                     "image": "KKR",
+                     "hashTag": "#KolkataKnightRiders"
                      },
                      {
                      "id": 25,
                      "name": "Chennai Super Kings",
-                     "image": "CSK"
+                     "image": "CSK",
+                     "hashTag": "#ChennaiSuperKings"
                      },
                      {
                      "id": 25,
                      "name": "Rajasthan Royals",
-                     "image": "RR"
+                     "image": "RR",
+                     "hashTag": "#RajasthanRoyals"
                      },
                      {
                      "id": 25,
                      "name": "Sunrisers Hyderabad",
-                     "image": "SRH"
+                     "image": "SRH",
+                     "hashTag": "#SunrisersHyderabad"
                      },
                      {
                      "id": 25,
                      "name": "Royal Challengers Bangalore",
-                     "image": "RCB"
+                     "image": "RCB",
+                     "hashTag": "#RoyalChallengersBangalore"
                      },
                      {
                      "id": 25,
                      "name": "Mumbai Indians",
-                     "image": "MI"
+                     "image": "MI",
+                     "hashTag": "#MumbaiIndians"
                      },
                      {
                      "id": 25,
                      "name": "Kings XI Punjab",
-                     "image": "KXP"
+                     "image": "KXP",
+                     "hashTag": "#KingsXIPunjab"
                      },
                      {
                      "id": 25,
                      "name": "Delhi Daredevils",
-                     "image": "DD"
-                     },
+                     "image": "DD",
+                     "hashTag": "#DelhiDaredevils"
+                     }
                      ]
 }

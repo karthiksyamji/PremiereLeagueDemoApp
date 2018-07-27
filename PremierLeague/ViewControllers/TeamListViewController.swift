@@ -21,6 +21,7 @@ class TeamListViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.title = Texts.Titles.teamList
         fetchTeamList()
+        getToken()
 
     }
 
@@ -41,6 +42,12 @@ extension TeamListViewController {
                 return
             }
             self.initializeView()
+        }
+    }
+    
+    func getToken() {
+        manager.getBearerToken { (success, error) in
+            
         }
     }
     
@@ -68,8 +75,8 @@ extension TeamListViewController: UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let tweetVC = self.storyboard?.instantiateViewController(withIdentifier: "TeamTweetsViewController") as! TeamTweetsViewController
-        tweetVC.tweetKeyword = self.teamList[indexPath.row].name
+        let tweetVC = self.storyboard?.instantiateViewController(withIdentifier: Texts.ViewControllers.teamVC) as! TeamTweetsViewController
+        tweetVC.tweetKeyword = self.teamList[indexPath.row].hashTag
         self.navigationController?.pushViewController(tweetVC, animated: true)
     }
     

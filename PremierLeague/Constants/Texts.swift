@@ -16,8 +16,13 @@ struct Texts {
         static let tweets = "Tweets"
     }
     
+    struct ViewControllers {
+        static let teamVC = "TeamTweetsViewController"
+    }
+    
     struct CustomNib {
         static let TeamDetailTableViewCell = "TeamDetailTableViewCell"
+        static let TweetCell = "TweetsTableViewCell"
     }
     
     struct WebConstants {

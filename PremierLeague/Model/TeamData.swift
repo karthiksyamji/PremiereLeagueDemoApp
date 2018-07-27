@@ -12,6 +12,7 @@ struct TeamData: Decodable {
     var id: Int?
     var name: String?
     var image: String?
+    var hashTag: String?
 }
 
 struct TeamList: Decodable {

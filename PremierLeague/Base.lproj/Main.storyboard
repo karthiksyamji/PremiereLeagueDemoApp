@@ -54,26 +54,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aks-Wz-kfq">
-                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vh6-E4-cMy">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <tableView key="tableFooterView" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ymp-Lc-qy3">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <connections>
+                                        <outlet property="dataSource" destination="7o1-tC-nXi" id="Se0-hE-PhG"/>
+                                        <outlet property="delegate" destination="7o1-tC-nXi" id="0jf-yu-fmX"/>
+                                    </connections>
+                                </tableView>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="uLu-Cj-Whb" firstAttribute="bottom" secondItem="Aks-Wz-kfq" secondAttribute="bottom" id="ILT-0Z-5Cu"/>
-                            <constraint firstItem="Aks-Wz-kfq" firstAttribute="top" secondItem="uLu-Cj-Whb" secondAttribute="top" id="LML-5z-Fsb"/>
-                            <constraint firstAttribute="trailing" secondItem="Aks-Wz-kfq" secondAttribute="trailing" id="Mda-ne-foH"/>
-                            <constraint firstItem="Aks-Wz-kfq" firstAttribute="leading" secondItem="0ZK-27-kBg" secondAttribute="leading" id="ST6-4W-huN"/>
+                            <constraint firstItem="Vh6-E4-cMy" firstAttribute="leading" secondItem="0ZK-27-kBg" secondAttribute="leading" id="I7I-qM-hvm"/>
+                            <constraint firstAttribute="bottom" secondItem="Vh6-E4-cMy" secondAttribute="bottom" id="KGO-20-bD6"/>
+                            <constraint firstAttribute="trailing" secondItem="Vh6-E4-cMy" secondAttribute="trailing" id="bDL-al-hTJ"/>
+                            <constraint firstItem="Vh6-E4-cMy" firstAttribute="top" secondItem="0ZK-27-kBg" secondAttribute="top" id="sqh-sb-yWJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uLu-Cj-Whb"/>
                     </view>
                     <connections>
-                        <outlet property="tweetWebView" destination="Aks-Wz-kfq" id="rT8-qM-XSU"/>
+                        <outlet property="tweetsTable" destination="ymp-Lc-qy3" id="YEp-7K-fUA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pTm-yF-244" userLabel="First Responder" sceneMemberID="firstResponder"/>
